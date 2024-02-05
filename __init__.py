@@ -23,12 +23,14 @@ import random
 bl_info = {
     'name': 'Typewriter Text',
     'description': 'Typewriter Text effect for font objects',
-    'author': 'Bassam Kurdali, Vilem Novak, Jimmy Berry',
-    'version': (0, 3, 2),
+    'author': 'Bassam Kurdali, Vilem Novak, Jimmy Berry, doakey3, gandalf3, cesarl94',
+    'version': (0, 3, 3),
     'blender': (2, 80, 0),
-    'location': 'Properties Editor, Text Context',
+    'location': 'Properties Editor > Text Context',
     'url': 'https://github.com/boombatower/blender-typewriter-addon',
-    'category': 'Text'}
+    'support':'COMMUNITY',
+    'category': 'Object'
+}
 
 
 def randomize(t,width):
@@ -53,12 +55,12 @@ def uptext(text, eval_text):
     slice the source text up to the character_count
     '''
 
-    source = text.source_text
+    source = eval_text.source_text
     if source in bpy.data.texts:
-        if text.separator!='':    strings=bpy.data.texts[source].as_string().split(text.separator)
+        if eval_text.separator!='':    strings=bpy.data.texts[source].as_string().split(eval_text.separator)
         else:
             strings=[bpy.data.texts[source].as_string()]
-        idx=min(len(strings),text.text_index)
+        idx=min(len(strings),eval_text.text_index)
         t=strings[idx]
 
         #remove line endings after separator

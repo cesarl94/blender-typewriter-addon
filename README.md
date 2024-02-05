@@ -26,3 +26,4 @@
 ## Usage tutorial
 
 - [Jimmy Berry (version 0.3.1)](https://www.youtube.com/watch?v=T0ryc7kJzZA)
+- [César Lorenzon (version 0.3.3)](https://youtu.be/rTG_1kPb8g4)
